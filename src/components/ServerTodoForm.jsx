@@ -1,8 +1,14 @@
+import Todo from "@/models/Todo";
+import connectDB from "@/utils/connectDB";
+
 const ServerTodoForm = () => {
   const addHandler = async (formData) => {
     "use server";
+    await connectDB();
     const title = formData.get("title");
-    console.log(title);
+    const description = formData.get("description");
+    const todo = await Todo.create({ title, description });
+    console.log(todo);
   };
 
   return (
