@@ -1,6 +1,6 @@
 "use client";
+import Button from "@/ui/Button";
 import { addHandler } from "@/utils/actions";
-
 
 const ClientTodoForm = () => {
   return (
@@ -13,7 +13,7 @@ const ClientTodoForm = () => {
         <label htmlFor="desc">Description</label>
         <input type="text" id="desc" name="description" />
       </div>
-      <button type="submit">Add Todo </button>
+      <Button />
     </form>
   );
 };
